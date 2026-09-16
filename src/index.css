@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+@layer base {
+/* Custom Paper Print Stylesheet */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 0mm !important; /* Eliminates browser default headers (date/time/title) and footers (localhost URL) */
+  }
+
+  html,
+  body,
+  #root,
+  #root > div,
+  #root > div > div,
+  main {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+  }
+
+  body {
+    font-size: 11pt !important;
+    color: #000000 !important;
+    background: #ffffff !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  .no-print,
+  nav,
+  aside,
+  header {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .page-break,
+  .set-page-break {
+    page-break-before: always !important;
+    break-before: page !important;
+  }
+
+  .page-break-inside-avoid,
+  .question-item {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .section-header {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+
+  .paper-sheet {
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 auto !important;
+    padding: 12mm 15mm !important; /* Crisp physical A4 margin */
+    width: 100% !important;
+    max-width: 100% !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .paper-sheet:last-of-type,
+  .paper-sheet.single-set-sheet {
+    page-break-after: auto !important;
+    break-after: auto !important;
+  }
+
+  .paper-sheet * {
+    color: #000000 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .paper-sheet img {
+    max-width: 100% !important;
+    background-color: transparent !important;
+    display: block !important;
+  }
+}
+}
+
+/* Custom modern scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(245, 158, 11, 0.3);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(245, 158, 11, 0.6);
+}
+
+/* Paper font styling */
+.font-serif-exam {
+  font-family: 'Crimson Pro', Georgia, serif;
+}

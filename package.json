@@ -1,0 +1,41 @@
+{
+  "name": "paperforge",
+  "version": "1.0.0",
+  "description": "Professional exam paper maker & hierarchical question bank with anti-cheating multi-sets (Set A-D), direct Excel import, and clean Word/PDF export.",
+  "author": "PANKAJ SHARMA <punitsharma16042003>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/punitsharma16042003/PaperForge.git"
+  },
+  "type": "module",
+  "scripts": {
+    "dev:client": "vite",
+    "dev:server": "node server/server.js",
+    "dev": "concurrently \"npm:dev:server\" \"npm:dev:client\"",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "node server/server.js"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "cors": "^2.8.5",
+    "docx": "^9.1.1",
+    "express": "^4.21.2",
+    "file-saver": "^2.0.5",
+    "katex": "^0.16.11",
+    "lucide-react": "^0.475.0",
+    "multer": "^1.4.5-lts.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.0.1",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.9",
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "tailwindcss": "^4.0.9",
+    "vite": "^6.2.0"
+  }
+}

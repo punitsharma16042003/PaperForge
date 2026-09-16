@@ -133,7 +133,14 @@ PaperForge/
 
 ### Running the Application
 
-#### Development Mode (Concurrent Vite + Express)
+#### 🖥️ Option 1: One-Click Windows Executable (`PaperForge.exe`)
+If you are on Windows, simply double-click **`PaperForge.exe`** in the root folder:
+- Automatically detects Node.js runtime and dependencies.
+- Starts the PaperForge backend server on `http://localhost:3001`.
+- Automatically launches your default web browser to the dashboard.
+- Press `O` anytime to re-open the browser or `Q` to shut down gracefully.
+
+#### ⚙️ Option 2: Development Mode (Concurrent Vite + Express)
 Run both the Vite frontend dev server and the Express API server concurrently:
 ```bash
 npm run dev
